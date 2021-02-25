@@ -1,7 +1,8 @@
 # README
 SonarQube 的 Docker 配置 Docker for SonarQube
 
-
+## 使用 
+`docker pull sonarnextnext/sonarqube`
 
 ## 使用 docker-compose 启动
 
@@ -12,7 +13,6 @@ Postgresql 数据库的数据默认会挂载在执行目录下
 ### 启动 
 
 `docker-compose up -d `
-
 
 
 

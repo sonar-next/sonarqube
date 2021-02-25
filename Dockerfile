@@ -28,8 +28,8 @@ RUN curl -L -o $SONARQUBE_PLUGINS/sonar-cxx-plugin-1.3.2.1853.jar https://github
 RUN curl -L -o $SONARQUBE_PLUGINS/sonar-pmd-plugin-3.2.2.jar https://github.com/magaofei/sonar-pmd-p3c/releases/download/3.2.2/sonar-pmd-plugin-3.2.2.jar \
 && curl -L -o $SONARQUBE_PLUGINS/sonar-flutter-plugin-0.3.1.jar https://github.com/magaofei/sonar-flutter/releases/download/0.3.1-0/sonar-flutter-plugin-0.3.1.jar
 
-# sql
-RUN curl -L -o $SONARQUBE_PLUGINS/sonar-sql-plugin-1.1.0.jar https://github.com/gretard/sonar-sql-plugin/releases/download/1.1.0/sonar-sql-plugin-1.1.0.jar
+# sql 如果启用该插件，且仓库中包含 .sql 文件，将会极大的影响扫描速度
+# RUN curl -L -o $SONARQUBE_PLUGINS/sonar-sql-plugin-1.1.0.jar https://github.com/gretard/sonar-sql-plugin/releases/download/1.1.0/sonar-sql-plugin-1.1.0.jar
 
 # swift and objective-c
 RUN curl -L -o $SONARQUBE_PLUGINS/tal-sonar-swift-plugin-1.0.3.jar https://github.com/tal-tech/sonar-swift/releases/download/1.0.0/tal-sonar-swift-plugin-1.0.3.jar
