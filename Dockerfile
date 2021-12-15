@@ -32,7 +32,7 @@ RUN curl -L -o $SONARQUBE_PLUGINS/sonar-pmd-plugin-3.2.2.jar https://github.com/
 # RUN curl -L -o $SONARQUBE_PLUGINS/sonar-sql-plugin-1.1.0.jar https://github.com/gretard/sonar-sql-plugin/releases/download/1.1.0/sonar-sql-plugin-1.1.0.jar
 
 # swift and objective-c
-RUN curl -L -o $SONARQUBE_PLUGINS/tal-sonar-swift-plugin-1.0.3.jar https://github.com/tal-tech/sonar-swift/releases/download/1.0.3/tal-sonar-swift-plugin-1.0.3.jar
+RUN curl -L -o $SONARQUBE_PLUGINS/sonar-swift-plugin.jar https://github.com/sonar-next/sonar-swift/releases/download/v1.6.0/sonar-swift-plugin-1.6.0.jar
 RUN curl -L -o $SONARQUBE_PLUGINS/branch-plugin.jar https://github.com/mc1arke/sonarqube-community-branch-plugin/releases/download/1.3.2/sonarqube-community-branch-plugin-1.3.2.jar \
     && cp $SONARQUBE_PLUGINS/branch-plugin.jar $SONARQUBE_HOME/lib/common
    
