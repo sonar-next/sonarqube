@@ -4,6 +4,8 @@ SonarQube 的 Docker 配置 Docker for SonarQube
 ## 使用 
 `docker pull sonarnextnext/sonarqube`
 
+[sonarnextnext/sonarqube](https://hub.docker.com/r/sonarnextnext/sonarqube)
+
 ## 使用 docker-compose 启动
 
 复制 `docker-compose.yml` 文件到本地，然后修改 `POSTGRES_PASSWORD` 和 `SONARQUBE_JDBC_PASSWORD` 为你自己的密码。
