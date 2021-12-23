@@ -2,9 +2,9 @@ name: Docker Image CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [ "*" ]
   pull_request:
-    branches: [ master ]
+    branches: [ "*" ]
 
 jobs:
 
@@ -21,5 +21,5 @@ jobs:
         
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag sonarnextnext/sonarqube && docker push sonarnextnext/sonarqube
+      run: docker build . --file Dockerfile --tag sonarnextnext/sonarqube:$GITHUB_REF_NAME && docker push sonarnextnext/sonarqube:$GITHUB_REF_NAME
 
