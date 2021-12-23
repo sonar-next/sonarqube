@@ -3,6 +3,10 @@ FROM sonarqube:8.9-community
 ENV SONARQUBE_HOME=/opt/sonarqube
 ENV SONARQUBE_PLUGINS=$SONARQUBE_HOME/extensions/plugins/
 
+
+RUN set -eux; \
+    apk add --no-cache curl
+
 RUN rm -f $SONARQUBE_PLUGINS/sonar-html-plugin-*.jar \
 && rm -f $SONARQUBE_PLUGINS/sonar-xml-plugin-*.jar \
 && rm -f $SONARQUBE_PLUGINS/sonar-vbnet-plugin-*.jar \
@@ -23,4 +27,5 @@ RUN curl -L -o $SONARQUBE_PLUGINS/sonar-swift-plugin.jar https://github.com/sona
 RUN curl -L -o $SONARQUBE_PLUGINS/branch-plugin.jar https://github.com/mc1arke/sonarqube-community-branch-plugin/releases/download/1.8.1/sonarqube-community-branch-plugin-1.8.1.jar \
     && cp $SONARQUBE_PLUGINS/branch-plugin.jar $SONARQUBE_HOME/lib/common
    
+RUN rm -rf /var/cache/apk/*
 # COPY sonar.properties $SONARQUBE_HOME/conf/sonar.properties
